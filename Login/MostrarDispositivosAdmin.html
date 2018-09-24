@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Agregar Dispositivos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+
+    <link rel="icon" type="image/jpg" href="imagenes/plus.ico">
+
+    <link rel="stylesheet" href="css/inicio.css">
+</head>
+
+<body>
+    <!-- Spinner -->
+    <div id="load" class="loading">
+        <div class='outer-div'>
+            <div class='middle-div'>
+                <div class="loader1" id="loader1"></div>
+                <div class="loader2" id="loader2"></div>
+            </div>
+        </div>
+    </div>
+
+    <header>
+        <div class="navbar-fixed">
+            <nav class="red darken-3 darken-1 nav-cont">
+                <div class="nav-wrapper">
+                    <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                    <ul id="nav-mobile" class="right">
+                        <!-- Aqui se dibuja el boton de Salir -->
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="main">
+
+        <!-- Menu -->
+        <aside>
+            <!-- Contenidos Menu -->
+            <ul id="slide-out" class="sidenav sidenav-fixed sidenav-style">
+                <!-- Titulo del Menu / Datos del Usuario -->
+                <li>
+                    <!-- Este codigo se puede usar para que el fondo sea una imagen -->
+                    <div class="user-view" id="Mostrardatos">
+                        <img src="imagenes/loginn.gif" id="loader" style="width: 100%;height: 180%;">
+                        <div class="background">
+                            <img src="imagenes/11.png" style="width: 100%;height: 100%;">
+                        </div>
+
+                        <!-- En esta Parte Tambien se dibuja los datos del Usuario
+                               en le Menu(laterial) Sidenav -->
+
+                    </div>
+                </li>
+                <!-- Opciones del Menu -->
+                <!-- <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li> -->
+                <!-- <li><a class="subheader">Subheader</a></li> -->
+                <li><a class="waves-effect" href="inicio.html"><i class="material-icons">home</i>Inicio</a></li>
+                <li><a class="waves-effect" href="datos.html"><i class="material-icons">person</i>Perfil</a></li>
+                <li id="dispositivos"><a class="waves-effect" href="DispositivosAdm.html"><i class="material-icons">person</i>Dispositivos</a></li>
+            </ul>
+        </aside>
+
+        <div class="contenido">
+            <div class="titulo-contenido">
+                <a class="waves-effect waves-light btn right" href="DispositivosAdm.html"><i class="material-icons left">add</i>Dispositivos</a>
+                <h4>
+                    <i class="material-icons">laptop</i>
+                    Dispositivos Permitidos
+                </h4>
+            </div>
+            <br>
+
+            <div>
+
+                <ul class="collection" id="listaDispositivos">
+                </ul>
+            </div>
+
+
+        </div>
+    </div>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+
+    <script src="js/loading.js"></script>
+    <script src="js/general.js"></script>
+    <script src="js/MostrarDispositivos.js"></script>
+
+
+
+
+    <script src="https://www.gstatic.com/firebasejs/5.4.2/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyBcZ5yDHs5DIaABNelkyyoDeZNDmtY4Sko",
+            authDomain: "login-e87d0.firebaseapp.com",
+            databaseURL: "https://login-e87d0.firebaseio.com",
+            projectId: "login-e87d0",
+            storageBucket: "login-e87d0.appspot.com",
+            messagingSenderId: "715320919658"
+        };
+        firebase.initializeApp(config);
+    </script>
+
+</body>
+
+</html>
